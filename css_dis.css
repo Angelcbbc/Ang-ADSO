@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #0f1c2d;
+  color: white;
+}
+.contenedor{
+  width: 90%;
+  margin: 40px;
+}
+.perfil{
+  text-align: center;
+}
+.perfil h1{
+  font-size: 3em; 
+  color: rgb(44, 255, 185);
+  padding-top: 40px;
+}
+.perfil p{
+  font-size: 24px;
+  color: rgb(28, 102, 77);
+}
+.foto{ 
+  width: 120px;
+  height: 120px;
+  border: rgb(255, 255, 255) solid 2px;
+  margin: 0 auto; 
+  border-radius: 50%;
+  background: #34d17b;
+}
