@@ -1,0 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.contenedor{
+  display: grid;
+  grid-template-areas:
+  "a a b"
+  "c d b";
+  gap: 10px ;
+}
+.area{
+  border: 1px solid black;
+  background-color: aquamarine;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blueviolet;
+  font-size: 3rem;
+}
+.a{
+  grid-area: a;
+}
+.b{grid-area: b;}
+.c{grid-area: c;}
+.d{grid-area: d;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+  display: grid;
+  grid-template-areas:
+  "h h h h"
+  "n s1 s1 s1"
+  ". s1 s1 s1"
+  ". s2 s2 s2"
+  "f f f f";
+  gap: 25px;
+  border-color: rgb(77, 75, 75);
+}
+header{
+  grid-area: h;
+  background-color: rgb(83, 83, 83);
+  padding: 20 px;
+  text-align: center;
+}
+.n{
+  grid-area: n;
+  background-color: rgb(101, 102, 102);
+  padding: 20px;
+  height: 200px;
+}
+.s1{
+  grid-area: s1;
+  background-color: rgb(111, 114, 114);
+  padding: 20px;
+  height: 300px;
+}
+.s2{
+  grid-area: s2;
+  background-color: cadetblue;
+  padding: 20px;
+  height: 30px;
+}
+.f{
+  grid-area: f;
+  background-color: khaki;
+  padding: 20px;
+  height: 200px;
+}
+@media screen and (max-width:700px) {
+  .container{
+    grid-template-areas:
+    "h"
+    "n"
+    "s1"
+    "s2"
+    "f";
+  }
+  header{
+    background-color: brown;
+  }
+  .n{
+    background-color: aquamarine;
+  }
+  .s1{
+    background-color: aquamarine;
+  }.s2{
+    background-color: aquamarine;
+  }.f{
+    background-color: aquamarine;
+  }
+}
