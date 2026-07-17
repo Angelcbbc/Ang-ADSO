@@ -69,3 +69,56 @@ body{
 .fila strong{
   flex: 1;
 }
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #3a3245;
+  background-color: #0d0b20;
+}
+.menu{
+  display: flex;
+  align-items: center;
+}
+.menu>ul{
+  display: flex;
+  list-style: none;
+}
+
+.menu>ul>li>a{
+  display: block;
+  padding: 10px 20px;
+  color: rgb(62,77,74);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu> ul > li:hover > a {
+  color: #44e67f;
+}
+.submenu{
+  display: none;
+  position: absolute;
+  top: auto;
+  left: auto;
+  background:#9ed4f8;
+  list-style: none;
+}
+.menu> ul > li:hover .submenu{
+  display: block;
+}
+.submenu>li{
+  width: 100%;
+}
+.submenu>li>a{
+  display: block;
+  padding: 15px 20px;
+  color: aliceblue;
+  text-decoration: none;
+  background-color: #0f1c2d;
+  transition: 4s;
+}
+.submenu>li:hover>a{
+  background-color: #0000;
+}
