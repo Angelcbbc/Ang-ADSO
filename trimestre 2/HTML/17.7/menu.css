@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #0f1c2d;
+  color: white;
+}
+.contenedor{
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;  
+}
+.perfil{
+  text-align: center;
+}
+.perfil h1{
+  font-size: 3em; 
+  color: #34d17b;
+  padding-top: 40px;
+  font-family: "montserrat", sans-serif;
+}
+
+.foto{ 
+  width: 120px;
+  height: 120px;
+  border: rgb(255, 255, 255) solid 2px;
+  margin: 0 auto; 
+  border-radius: 50%;
+  background: #34d17b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 50px #34d17b;
+}
+.foto i{
+  font-size: 90px;
+  color: #9409df;
+}
+.cargo{
+  letter-spacing: 4px;
+  color: #34d17b;
+  font-size: 24px;
+}
+.informacion{
+  border: 1px solid #2b8a5a ;
+  background: #172636;
+  border-radius: 20px 10px 5px 30px;
+  padding: 35px;
+  margin-bottom: 40px;
+}
+.informacion h2{
+  color: #34d17b;
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-family: "montserrat", sans-serif;
+}
+.fila{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #2c3f52;
+}
+.fila span{
+  width: 180px;
+  color: #676b67;
+}
+.fila strong{
+  flex: 1;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #3a3245;
+  background-color: #0d0b20;
+}
+.menu{
+  display: flex;
+  align-items: center;
+}
+.menu>ul{
+  display: flex;
+  list-style: none;
+}
+
+.menu>ul>li>a{
+  display: block;
+  padding: 10px 20px;
+  color: rgb(62,77,74);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu> ul > li:hover > a {
+  color: #44e67f;
+}
+.submenu{
+  display: none;
+  position: absolute;
+  top: auto;
+  left: auto;
+  background:#9ed4f8;
+  list-style: none;
+}
+.menu> ul > li:hover .submenu{
+  display: block;
+}
+.submenu>li{
+  width: 100%;
+}
+.submenu>li>a{
+  display: block;
+  padding: 15px 20px;
+  color: aliceblue;
+  text-decoration: none;
+  background-color: #0f1c2d;
+  transition: 4s;
+}
+.submenu>li:hover>a{
+  background-color: #0000;
+}
