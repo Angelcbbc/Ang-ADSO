@@ -1,0 +1,31 @@
+﻿;;;;;;;;;;;;;;ESTUDIANTES;;;;;;;;;;;;Curso;
+ID_M;Documento;Nombre_Apre;Apellido;ID_Ficha;Instructor;ID_Curso;Curso;Temas;Nota;;;;;ID;TD;Documento;Nom;Apellido;Ficha;Programa;NOTA;;ID-CURSO;ID-INSTR;;ID-Curso;Curso
+M001;CC-1023456789;Juan;Pérez;F001;Carlos;Ruiz;Bases de Datos;SQL;4.2;;;;;E001;CC;1023456789;Juan;Pérez;F001;ADSO;4,2;;F001;I001;;C001;Base de Datos
+M001;CC-1023456790;Juan;Pérez;F002;Carlos;Ruiz;Bases de Datos;MER;4.2;;ID-C;ID-T;;E002;CC;1034567890;María;Gómez;F001;ADSO;4,5;;F001;I001;;C002;Programacion
+M002;CC-1034567890;María;Gómez;F001;Carlos;Ruiz;Bases de Datos;SQL;4.5;;C001;T001;;E003;TI;1123456789;Pedro;López;F001;ADSO;4;;F002;I002;;C003;Desarrollo web 
+M002;CC-1034567891;María;Gómez;F002;Carlos;Ruiz;Bases de Datos;MER;4.5;;C001;T002;;E004;CC;1012345677;Ana;Torres;F002;ADSO;4,6;;F002;I002;;;
+M003;TI-1123456789;Pedro;López;F001;Carlos;Ruiz;Programación;POO;4.0;;C002;T003;;E005;CC;1098765431;Luis;Martínez;F002;ADSO;3,8;;F003;I003;;;
+M003;TI-1123456790;Pedro;López;F002;Carlos;Ruiz;Programación;Java;4.0;;C002;T004;;E006;CC;1009876543;Sofía;Castro;F003;ADSO;4,6;;F004;I001;;PROGRAMA;
+M004;CC-1012345677;Ana;Torres;F001;Laura;Díaz;Bases de Datos;SQL;4.6;;C003;T005;;E007;TI;1234567890;Diego;Ramírez;F003;ADSO;4,1;;F005;I002;;ID-PROG;PROG
+M004;CC-1012345678;Ana;Torres;F002;Laura;Díaz;Bases de Datos; MER;4.6;;C003;T006;;E008;CC;1045678901;Laura;Silva;F004;ADSO;4,5;;;;;P001;ADSO
+M005;CC-1098765431;Luis;Martínez;F001;Laura;Díaz;Programación;POO;3.8;;C004;T007;;E009;CC;1087654321;Carlos;Gómez;F004;ADSO;4,8;;;;;P002;TPS
+M005;CC-1098765432;Luis;Martínez;F002;Laura;Díaz;Programación;Java;3.8;;C004;T001;;E010;CC;1056789012;Camila;Rojas;F005;TPS;4,3;;ID-EST;ID-FICH;;;
+M006;CC-1009876543;Sofía;Castro;F003;Andrés;Mora;Desarrollo Web;CSS;4.6;;;;;;;;;;;;;;E001;F001;;Temas;
+M006;CC-1009876544;Sofía;Castro;F004;Andrés;Mora;Desarrollo Web;HTML;4.6;;;;;Instructores;;;;;;;;;E002;F001;;ID-TEMAS;TEMAS
+M007;TI-1234567890;Diego;Ramírez;F003;Andrés;Mora;Desarrollo Web;HTML;4.1;;;;;ID-INSTR;NOM;APE;;;ID-FICHA;ID-PROG;ID-INST;;E003;F001;;T001;SQL
+M007;TI-1234567891;Diego;Ramírez;F004;Andrés;Mora;Desarrollo Web; CSS;4.1;;;;;I001;Carlos;Ruiz;;;F001;P001;I001;;E004;;;T002;MER
+M008;CC-1045678901;Laura;Silva;F004;Carlos;Ruiz;Bases de Datos;SQL;4.5;;;;;I002;Laura;Diaz;;;F002;P001;I001;;E005;;;T003;POO 
+M008;CC-1045678902;Laura;Silva;F005;Carlos;Ruiz;Bases de Datos;Normalización;4.5;;;;;I003;Andres;Mora;;;F003;P001;I003;;E006;;;T004;JAVA
+M009;CC-1087654321;Carlos;Gómez;F004;Carlos;Ruiz;Bases de Datos;SQL;4.8;;;;;;;;;;F004;P001;I004;;E007;;;T005;HTML
+M009;CC-1087654322;Carlos;Gómez;F005;Carlos;Ruiz;Bases de Datos;Normalización;4.8;;;;;MATRICULA;;;;;F005;P002;I002;;E008;;;T006;CSS
+M010;CC-1056789012;Camila;Rojas;F005;Laura;Díaz;Programación;POO;4.3;;;;;ID-M;ID-EST;ID-CURS;;;;;;;E009;;;T007;NORMALIZACION
+M010;CC-1056789013;Camila;Rojas;F006;Laura;Díaz;Programación; Java;4.3;;;;;M001;E001;C001;;;;;;;E010;;;;
+;;;;;;;;;;;;;;M002;E002;C001;;;ID-Ficha;ID-INST;ID-CURS;;;;;;
+;;;;;;;;;;;;;;M003;E003;C002;;;F001;I001;C001;;;;;;
+;;;;;;;;;;;;;;M004;E004;C001;;;F001;I001;C002;;;;;;
+;;;;;;;;;;;;;;M005;E005;C002;;;F002;I002;C001;;;;;;
+;;;;;;;;;;;;;;M006;E006;C003;;;F002;I002;C002;;;;;;
+;;;;;;;;;;;;;;M007;E007;C003;;;F003;I003;C003;;;;;;
+;;;;;;;;;;;;;;M008;E008;C001;;;F004;I001;C004;;;;;;
+;;;;;;;;;;;;;;M009;E009;C001;;;F005;I002;C002;;;;;;
+;;;;;;;;;;;;;;M010;E010;C002;;;;;;;;;;;
