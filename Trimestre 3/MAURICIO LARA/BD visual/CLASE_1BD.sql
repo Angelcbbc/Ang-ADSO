@@ -98,6 +98,7 @@ create table detalle_pedidos(
     on delete restrict
 )
 engine = INNODB;
+
 --crear tabla usuarios--
 CREATE TABLE usuarios (
     id_usuario int NOT NULL AUTO_INCREMENT,
@@ -121,3 +122,74 @@ CREATE TABLE usuarios (
     CONSTRAINT fk_usuarios_clientes FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente)
     on delete set null
 ) engine = INNODB;
+
+--hasta ahora nosotros hemos creado tablas, BD, relaciones, restricciones,
+
+--mirar tablas de la base de datos
+show tables;
+
+--DECRIBE TABLA 
+desccribe y la tabla que quiero ver ejemplo: describe clientes;
+
+-- ahora vamos a ver la estructura de la tabla clientes
+show create table clientes;
+
+--dicionario de datos
+SELECT table_name, constraint_name, constraint_type,
+FROM information_schema.table_constraints
+WHERE table_schema = 'tienda_adso'
+ORDER BY table_name, constraint_name;
+
+-- agregar una columna a la tabla existente
+ALTER TABLE clientes
+ADD COLUMN fecha_nacimiento DATE NULL AFTER apellidoS;
+
+--CAMBIAR EL TIPO DE DATO DE UNA COLUMNA EXISTENTE
+ALTER TABLE clientes
+MODIFY COLUMN telefono VARCHAR(50) NULL;
+
+--renombrar una columna change column pide el nombre viejo y el nombre nuevo
+--y la definición de la columna
+ALTER TABLE clientes
+CHANGE COLUMN ciudad ciudad_residencia VARCHAR(50) NOT NULL;
+
+--eliminar una columna de una tabla existente
+ALTER TABLE clientes
+DROP COLUMN fecha_nacimiento;
+
+--AGREGAR UNA DESCRIPCIÓN A UNA COLUMNA EXISTENTE
+ALTER TABLE productos
+ADD CONSTRAINT uq_productos_nombre UNIQUE(nombre);
+
+--eliminar una restricción de una tabla existente
+ALTER TABLE productos
+DROP INDEX uq_productos_nombre;
+
+--crear un índice para hacer más rápida la búsqueda
+CREATE INDEX idx_productos_nombre ON productos(nombre);
+CREATE INDEX idx_pedidos_fecha ON pedidos(fecha_pedido);
+CREATE INDEX idx_clientes_apellidos ON clientes(apellidos,nombre);--indice compuesto por 2 columnas
+
+--mirar los índices de una tabla
+SHOW INDEXES FROM productos;
+
+--haga el codigo para crear una tabla llamada tabla_practica campos id y detalle
+--
+CREATE TABLE tabla_prac (
+    id int AUTO_INCREMENT PRIMARY KEY,
+    detalle varchar(100)
+);
+
+--insertar datos en la tabla tabla_prac
+INSERT INTO tabla_prac (detalle) VALUES ('fila 1'),('fila 2');
+
+--borrar todas las filas de golpe y reiniciar el autoincrement
+TRUNCATE TABLE tabla_prac;
+
+--cambiar el nombre de la tabla
+RENAME TABLE tabla_prac TO tabla_borrar;
+
+---eliminar la tabla
+DROP TABLE tabla_borrar;
+
+--
