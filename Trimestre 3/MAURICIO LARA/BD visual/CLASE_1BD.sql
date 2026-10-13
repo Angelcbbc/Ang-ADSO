@@ -157,7 +157,7 @@ CHANGE COLUMN ciudad ciudad_residencia VARCHAR(50) NOT NULL;
 ALTER TABLE clientes
 DROP COLUMN fecha_nacimiento;
 
---AGREGAR UNA DESCRIPCIÓN A UNA COLUMNA EXISTENTE
+--AGREGAR UNA RESTRICCIÓN A UNA COLUMNA EXISTENTE
 ALTER TABLE productos
 ADD CONSTRAINT uq_productos_nombre UNIQUE(nombre);
 
@@ -193,3 +193,56 @@ RENAME TABLE tabla_prac TO tabla_borrar;
 DROP TABLE tabla_borrar;
 
 --
+CREATE TABLE provedores (
+    id_provedor int NOT NULL AUTO_INCREMENT,
+    nit varchar(50) NOT NULL,
+    razon_social varchar(255) NOT NULL,
+    telefono varchar(20) NULL,
+    mail varchar(100) NULL,
+    ciudad varchar(50) NULL,
+    activo boolean NOT NULL default true,
+    CONSTRAINT pk_provedores PRIMARY KEY(id_provedor),
+    CONSTRAINT u_nit_provedores UNIQUE(nit),
+    CONSTRAINT u_mail_provedores UNIQUE(mail),
+)
+engine = INNODB;
+
+--
+ALTER TABLE productos
+ADD COLUMN id_provedor int NULL,
+ADD CONSTRAINT fk_productos_provedores FOREIGN KEY(id_provedor) REFERENCES provedores(id_provedor)
+on delete set null
+
+--
+CREATE TABLE direc_envio (
+    id_direc_envio int NOT NULL AUTO_INCREMENT,
+    id_cliente int NOT NULL,
+    direccion varchar(255) NOT NULL,
+    ciudad varchar(50) NOT NULL,
+    barrio varchar(50) NOT NULL,
+    es_principal boolean NOT NULL default false,
+    CONSTRAINT pk_direc_envio PRIMARY KEY(id_direc_envio),
+    CONSTRAINT fk_direc_envio_clientes FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente)
+    ON DELETE CASCADE
+)
+engine = INNODB;
+
+--
+ALTER TABLE PRODUCTOS
+ADD CONSTRAINT ck_productos_precio_max CHECK(precio <= 50000000);
+
+--
+CREATE INDEX idx_clientes_ciudad ON clientes(ciudad);
+
+--
+CREATE TABLE pruebas (
+    id_pruebas int NOT NULL AUTO_INCREMENT,
+    nombre_p VARCHAR(50) NOT NULL,
+    CONSTRAINT pk_pruebas PRIMARY KEY(id_pruebas)
+)ENGINE = INNODB;
+
+--
+RENAME TABLE pruebas TO pruebas_old;
+
+-- 
+DROP TABLE pruebas_old;
